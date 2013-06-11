@@ -1,16 +1,32 @@
-<plugin name='ldap' version='0.8.2' grailsVersion='1.1 &gt; *'>
+<plugin name='ldap' version='0.8.2' grailsVersion='2.2.2 &gt; *'>
   <author>Luke Daley</author>
   <authorEmail>ld@ldaley.com</authorEmail>
   <title>Adds easy to use LDAP connectivity</title>
   <description>Utilises Gldapo (http://gldapo.codehaus.org) to provide an object oriented LDAP interface</description>
   <documentation>http://grails.org/plugin/ldap</documentation>
+  <type>LdapGrailsPlugin</type>
   <resources>
-    <resource>Config</resource>
-    <resource>DataSource</resource>
     <resource>spring.resources</resource>
     <resource>Group</resource>
     <resource>Person</resource>
     <resource>LdapServer</resource>
   </resources>
-  <dependencies />
+  <repositories>
+    <repository name='http://ia-resolver/artifactory/repo' url='http://ia-resolver/artifactory/repo' />
+    <repository name='http://ia-resolver/artifactory/repo/' url='http://ia-resolver/artifactory/repo/' />
+  </repositories>
+  <dependencies>
+    <test>
+      <dependency group='org.apache.directory.shared' name='shared-ldap-constants' version='0.9.12' />
+      <dependency group='org.apache.directory.server' name='apacheds-all' version='1.5.4' />
+      <dependency group='org.apache.directory.shared' name='shared-ldap' version='0.9.12' />
+      <dependency group='org.apache.directory.shared' name='shared-asn1' version='0.9.12' />
+    </test>
+    <compile>
+      <dependency group='org.codehaus' name='gldapo' version='0.8.2' />
+    </compile>
+  </dependencies>
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
 </plugin>
