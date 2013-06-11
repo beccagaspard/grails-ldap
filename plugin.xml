@@ -12,18 +12,19 @@
     <resource>LdapServer</resource>
   </resources>
   <repositories>
-    <repository name='http://ia-resolver/artifactory/repo' url='http://ia-resolver/artifactory/repo' />
-    <repository name='http://ia-resolver/artifactory/repo/' url='http://ia-resolver/artifactory/repo/' />
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
   </repositories>
   <dependencies>
     <test>
+      <dependency group='org.apache.directory.shared' name='shared-asn1' version='0.9.12' />
       <dependency group='org.apache.directory.shared' name='shared-ldap-constants' version='0.9.12' />
       <dependency group='org.apache.directory.server' name='apacheds-all' version='1.5.4' />
       <dependency group='org.apache.directory.shared' name='shared-ldap' version='0.9.12' />
-      <dependency group='org.apache.directory.shared' name='shared-asn1' version='0.9.12' />
     </test>
     <compile>
-      <dependency group='org.codehaus' name='gldapo' version='0.8.2' />
+      <dependency group='org.codehaus' name='gldapo' version='0.8.5' />
+      <dependency group='org.springframework.ldap' name='spring-ldap' version='1.3.1.RELEASE' />
     </compile>
   </dependencies>
   <plugins />

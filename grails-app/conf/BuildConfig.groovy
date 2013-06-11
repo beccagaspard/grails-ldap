@@ -34,7 +34,8 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile ('org.codehaus:gldapo:0.8.2')
+		compile ('org.codehaus:gldapo:0.8.5')
+		compile ('org.springframework.ldap:spring-ldap:1.3.1.RELEASE')
 
 		test ('org.apache.directory.server:apacheds-all:1.5.4')
 		test ('org.apache.directory.shared:shared-asn1:0.9.12')
