@@ -34,13 +34,15 @@ grails.project.dependency.resolution = {
 	}
 
 	dependencies {
-		compile ('org.codehaus:gldapo:0.8.5')
-		compile ('org.springframework.ldap:spring-ldap:1.3.1.RELEASE')
+		compile ('org.codehaus:gldapo:0.8.5'){transitive = false}
+		compile ('com.ldaley:injecto:0.7'){transitive = false}
+		compile ('com.sun:ldapbp:1.0'){transitive = false}
+		compile ('org.springframework.ldap:spring-ldap:1.3.1.RELEASE'){transitive = false}
 
-		test ('org.apache.directory.server:apacheds-all:1.5.4')
-		test ('org.apache.directory.shared:shared-asn1:0.9.12')
-		test ('org.apache.directory.shared:shared-ldap:0.9.12')
-		test ('org.apache.directory.shared:shared-ldap-constants:0.9.12')
+		test ('org.apache.directory.server:apacheds-all:1.5.4'){export = false}
+		test ('org.apache.directory.shared:shared-asn1:0.9.12'){export = false}
+		test ('org.apache.directory.shared:shared-ldap:0.9.12'){export = false}
+		test ('org.apache.directory.shared:shared-ldap-constants:0.9.12'){export = false}
 	}
 
 	plugins {
